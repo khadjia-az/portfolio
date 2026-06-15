@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#FAF9F5]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing & Community Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Editorial Serif & Clean Sans-Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Palette Setup -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBase: '#FAF9F5',      /* Soft ivory canvas fallback */
+                        forestGreen: '#1A3A2B',    /* Deep sage-infused forest for editorial readability */
+                        bubblegumPink: '#F9CCD8',  /* Softened pastel pink for tickers & tags */
+                        lightPastelBlue: '#C9D7E3',/* Dreamy pastel sky blue accent */
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Canvas Layout & Marquee Animation -->
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        /* Fixed, non-shifting background canvas to prevent scroll gaps */
+        .global-aurora-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF9F5;
+            background-image: 
+                radial-gradient(circle at 85% 15%, rgba(249, 204, 216, 0.4) 0%, rgba(249, 204, 216, 0.15) 45%, transparent 70%), 
+                radial-gradient(circle at 15% 35%, rgba(186, 207, 187, 0.45) 0%, rgba(186, 207, 187, 0.15) 50%, transparent 70%),
+                radial-gradient(circle at 50% 75%, rgba(201, 215, 227, 0.4) 0%, rgba(201, 215, 227, 0.1) 45%, transparent 75%);
+            z-index: -20;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-transparent text-forestGreen font-sans selection:bg-bubblegumPink antialiased relative">
+
+    <!-- MASTER FIXED BACKGROUND CANVAS -->
+    <div class="global-aurora-canvas"></div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 bg-white/30 backdrop-blur-md border-b border-forestGreen/5 z-50 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-tight">KA<span class="font-sans text-xs uppercase tracking-widest ml-2 opacity-60">Portfolio</span></a>
+            <nav class="hidden md:flex space-x-10 text-sm uppercase tracking-widest font-medium">
+                <a href="#about" class="hover:opacity-60 transition-opacity">About</a>
+                <a href="#work" class="hover:opacity-60 transition-opacity">My Work</a>
+                <a href="#experience" class="hover:opacity-60 transition-opacity">Experience</a>
+                <a href="#contact" class="hover:opacity-60 transition-opacity">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. HERO WRAPPER CONTENT -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-16 relative z-10">
+        <!-- Personal Headshot Display Container -->
+<div class="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-sm border border-forestGreen/10 bg-white p-2 shadow-md">
+    <div class="w-full h-full overflow-hidden bg-zinc-100">
+        <!-- Kept the photo in its regular, original colors -->
+        <img 
+            src="your-headshot.jpg" 
+            alt="Khadija Asif" 
+            class="w-full h-full object-cover"
+        >
+    </div>
+</div>
+        
+        <!-- Editorial Headline Text Layout -->
+        <div class="w-full md:w-3/5 space-y-6">
+            <h1 class="font-serif text-5xl md:text-6xl tracking-tight leading-[1.15] text-forestGreen">
+                <div class="block mb-4">
+                    Hi, I'm <span class="relative inline-block z-10">
+                        Khadija
+                        <span class="absolute left-0 -bottom-0.5 w-full h-[3px] bg-[#F9CCD8] -z-10 rounded-xs"></span>
+                    </span>.
+                </div>
+                <div class="block text-4xl md:text-5xl font-light">
+                    Using <span class="italic font-normal">creative strategy</span> to bring people <span class="italic font-normal">together</span>.
+                </div>
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl leading-relaxed text-forestGreen/80 font-light">
+                Digital marketer dedicated to driving community engagement and growth. I bridge the gap between intentional social media strategy, creative visual storytelling, and seamless e-commerce performance.
+            </p>
+            <div class="pt-4">
+    <a href="#connect" class="inline-block px-8 py-3 bg-transparent border border-[#1A3A2B] text-[#1A3A2B] font-sans text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 hover:bg-[#F9CCD8] hover:border-[#F9CCD8] hover:scale-105">
+        Let's Connect ✦
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER STRIP 1 (Top Moving Text) -->
+<div class="w-full bg-[#1A3A2B] border-y border-forestGreen/10 py-3 overflow-hidden select-none">
+    <div class="flex whitespace-nowrap animate-marquee">
+        <!-- Content Block 1 -->
+        <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium">
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+            <span class="mx-8">Community Growth ✦ Social Performance</span>
+            <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+        </div>
+        <!-- Duplicate Block for Seamless Loop -->
+        <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium" aria-hidden="true">
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+            <span class="mx-8">Community Growth ✦ Social Performance</span>
+            <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+        </div>
+    </div>
+</div>
+
+    <!-- ==========================================
+     2. "MY WORK" SECTION (Grid of Overlay Triggers)
+     ========================================== -->
+    <section id="work" class="max-w-6xl mx-auto px-6 py-24 relative z-10">
+        <div class="flex items-baseline justify-between border-b border-forestGreen/10 pb-4 mb-12">
+            <h2 class="font-serif text-4xl font-bold tracking-tight">My Work</h2>
+            <span class="text-xs uppercase tracking-widest opacity-60">Click any card to view full case study</span>
+        </div>
+
+        <!-- Interactive Column Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start mb-24">
+            
+            <!-- Card 1: WITM Campaigns -->
+            <div onclick="openModal('witmModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
+                <div class="w-full h-44 bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
+                    <img src="witm-campaign-preview.jpg" alt="WITM Project" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif text-2xl text-forestGreen leading-tight">WITM Social Campaigns</h3>
+                    <span class="text-xl text-forestGreen/40 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+                <p class="text-sm font-light leading-relaxed opacity-80 mb-4">
+                    Planned social content, coordinated team photoshoots, and ran coverage for student-led events to help peers feel connected.
+                </p>
+                <div class="inline-block self-start bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full">
+                    ✦ View Case Study
+                </div>
+            </div>
+
+            <!-- Card 2: Dog Child -->
+            <div onclick="openModal('dogChildModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
+                <div class="w-full h-44 bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
+                    <img src="dog-child-preview.jpg" alt="Dog Child Event" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif text-2xl text-forestGreen leading-tight">Dog Child Activation</h3>
+                    <span class="text-xl text-forestGreen/40 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+                <p class="text-sm font-light leading-relaxed opacity-80 mb-4">
+                    Ran an active event booth at the Canadian Pet Expo, focusing on sharing immediate value with pet parents to grow our community.
+                </p>
+                <div class="inline-block self-start bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full">
+                    ✦ View Case Study
+                </div>
+            </div>
+
+            <!-- Card 3: Sunwing SEO -->
+            <div onclick="openModal('sunwingModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
+                <div class="w-full h-44 bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
+                    <img src="sunwing-seo-preview.jpg" alt="Sunwing SEO" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif text-2xl text-forestGreen leading-tight">Sunwing SEO Project</h3>
+                    <span class="text-xl text-forestGreen/40 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+                <p class="text-sm font-light leading-relaxed opacity-80 mb-4">
+                    Looked into what questions customers were searching for on Google, then rewrote website text to make finding answers effortless.
+                </p>
+                <div class="inline-block self-start bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full">
+                    ✦ View Case Study
+                </div>
+            </div>
+
+            <!-- Card 4: ON RUNNING MODAL TRIGGER CARD -->
+            <div onclick="openModal('onRunningModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
+                <div class="w-full h-44 bg-creamBase border border-forestGreen/5 overflow-hidden mb-5 rounded-sm flex items-center justify-center font-serif text-forestGreen/40 text-sm italic">
+                    Click to open case study
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif text-2xl text-forestGreen leading-tight">On Running Launch</h3>
+                    <span class="text-xl text-forestGreen/40 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+                <p class="text-sm font-light leading-relaxed opacity-80 mb-4">
+                    Designed an exclusive digital run-club hub and localized post-run social activations to scale customer lifetime value.
+                </p>
+                <div class="inline-block self-start bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full">
+                    ✦ View Case Study
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     3. EXPERIENCE, EDUCATION & SKILLS SECTION
+     ========================================== -->
+    <section id="experience" class="w-full py-24 relative z-10 border-t border-forestGreen/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Column 1: Skills Card -->
+                <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
+                    <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Skills</h2>
+                    <ul class="space-y-4 text-sm uppercase tracking-wider font-medium text-forestGreen/80">
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Digital Marketing Frameworks</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Community Growth & Management</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Content Creation & Grid Design</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Social Performance & Analytics</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>E-Commerce Customer Retention</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Platform Optimization Models</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Education Card -->
+                <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
+                    <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Education</h2>
+                    <div class="space-y-6 text-forestGreen flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Degree Program</span>
+                            <h4 class="font-serif text-xl font-semibold mb-0.5">BComm in Business Management</h4>
+                            <p class="text-sm font-light opacity-90">Toronto Metropolitan University (TMU)</p>
+                            <p class="text-xs italic opacity-70 mt-1">Marketing Major</p>
+                        </div>
+                        <div class="border-t border-dashed border-forestGreen/10 pt-4">
+                            <span class="text-xs uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Credentials</span>
+                            <h4 class="font-serif text-xl font-semibold">Professional Certifications</h4>
+                            <p class="text-sm font-light opacity-90">Google Ads Certified Professional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Experience Card -->
+                <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
+                    <!-- Added matching section title for perfect balance -->
+                    <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Experience</h2>
+                    <div class="space-y-5 text-forestGreen">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">May 2023 – May 2024</span>
+                            <h4 class="font-serif text-lg font-semibold">Digital Marketing Intern</h4>
+                            <p class="text-sm font-light italic opacity-90">Sunwing Vacations Group</p>
+                        </div>
+                        <div class="border-t border-dashed border-forestGreen/10 pt-3">
+                            <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">Jan 2023 – Apr 2023</span>
+                            <h4 class="font-serif text-lg font-semibold">Digital Marketing Co-Op</h4>
+                            <p class="text-sm font-light italic opacity-90">Dog Child</p>
+                        </div>
+                        <div class="border-t border-dashed border-forestGreen/10 pt-3">
+                            <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">5-Year Engagement Milestone</span>
+                            <h4 class="font-serif text-lg font-semibold">Retail Sales Professional</h4>
+                            <p class="text-sm font-light italic opacity-90">Browns Shoes</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER STRIP 2 (Bottom Moving Text) -->
+<div class="w-full bg-[#1A3A2B] border-b border-forestGreen/10 py-3 overflow-hidden select-none">
+    <div class="flex whitespace-nowrap animate-marquee-reverse">
+        <!-- Content Block 1 -->
+        <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium">
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+            <span class="mx-8">Community Growth ✦ Social Performance</span>
+            <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+        </div>
+        <!-- Duplicate Block for Seamless Loop -->
+        <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium" aria-hidden="true">
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+            <span class="mx-8">Community Growth ✦ Social Performance</span>
+            <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+            <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+        </div>
+    </div>
+</div>
+
+    <!-- 4. CONTACT SECTION -->
+    <section id="connect" class="max-w-6xl mx-auto px-6 py-24 text-center space-y-12 relative z-10">
+        <div class="space-y-4">
+            <div class="inline-block bg-bubblegumPink text-forestGreen text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">
+                Get In Touch
+            </div>
+            <h2 class="font-serif text-5xl md:text-6xl tracking-tight text-forestGreen">Let's Connect</h2>
+            <p class="text-sm font-light opacity-70 max-w-sm mx-auto">
+                Whether you want to talk strategy, digital marketing metrics, or creative design execution, drop me a line.
+            </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto pt-6">
+            <!-- Email Pill -->
+            <a href="mailto:khadija.asif@torontomu.ca" class="group flex items-center gap-3 bg-white border border-forestGreen/5 hover:border-forestGreen/30 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md">
+                <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full group-hover:bg-bubblegumPink transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 17.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5A2.25 2.25 0 0 0 2.25 6.75m19.5 0v2.25m0-2.25l-6.75 4.50-.003-.002a1.124 1.124 0 0 1-1.244 0L3.75 6.75M21.75 6.75l-6.75 4.5M3.75 6.75l6.75 4.5" /></svg>
+                </div>
+                <span class="text-xs font-semibold tracking-widest uppercase">Email</span>
+            </a>
+
+            <!-- LinkedIn Pill -->
+            <a href="https://linkedin.com/in/khadija-asif" target="_blank" class="group flex items-center gap-3 bg-white border border-forestGreen/5 hover:border-forestGreen/30 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md">
+                <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full group-hover:bg-bubblegumPink transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <span class="text-xs font-semibold tracking-widest uppercase">LinkedIn</span>
+            </a>
+
+            <!-- Location Status Pill -->
+            <div class="group flex items-center gap-3 bg-white border border-forestGreen/5 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md select-none">
+                <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0Z" /></svg>
+                </div>
+                <span class="text-xs font-semibold tracking-widest uppercase">Mississauga, ON</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+     MODAL 1: WITM CAMPAIGNS
+     ========================================================= -->
+    <div id="witmModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
+            <button onclick="closeModal('witmModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
+            
+            <!-- LEFT COLUMN: Campaign Visual Assets -->
+<div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
+    <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Campaign Visual Assets</span>
+    
+    <!-- Image 1 -->
+    <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+        <img src="images/image.jpg" alt="WITM Event Keynote Presentation" class="w-full h-auto rounded-xs object-cover shadow-xs">
+    </div>
+    
+    <!-- Image 2 -->
+    <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+        <img src="images/image (1).jpg" alt="WITM Gala Dinner Tables" class="w-full h-auto rounded-xs object-cover shadow-xs">
+    </div>
+
+    <!-- Image 3 -->
+    <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+        <img src="images/screenshot1.jpg" alt="WITM Event Highlights Day 2 and 3" class="w-full h-auto rounded-xs object-cover shadow-xs">
+    </div>
+
+    <!-- Image 4 -->
+    <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+        <img src="images/screenshot2.jpg" alt="Empower Tech A Night to Remember Photo Booth" class="w-full h-auto rounded-xs object-cover shadow-xs">
+    </div>
+
+    <!-- Image 5 -->
+    <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+        <img src="images/screenshot3.jpg" alt="WITM The Faces Behind Team Magazine Covers" class="w-full h-auto rounded-xs object-cover shadow-xs">
+    </div>
+</div>
+            
+            <!-- RIGHT COLUMN: Campaign Descriptions -->
+            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Brand & Social Identity</div>
+                        <h2 class="font-serif text-3xl font-bold text-forestGreen">WITM Social Campaigns</h2>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
+                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Our student-led technology collective needed to completely revamp its digital brand perception. We faced the challenge of coordinating complex, multi-channel engagement to stand out in a noisy online space.</p>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
+                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Acted as Marketing Lead to spearhead a cohesive, multi-platform visual identity using Figma and Canva.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Managed cross-functional collaboration across teams to build interactive content templates and run live event coverage.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Organized a full team launch photoshoot from scratch, handling everything from location scouting to scheduling.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Targets</span>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">15,000+</span>
+                            <span class="text-[10px] font-light opacity-70">Total Platform Reach</span>
+                        </div>
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">1,172</span>
+                            <span class="text-[10px] font-light opacity-70">Active Interactions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+     MODAL 2: DOG CHILD ACTIVATION
+     ========================================================= -->
+<div id="dogChildModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
+        
+        <!-- Close Button -->
+        <button onclick="closeModal('dogChildModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
+        
+        <!-- LEFT COLUMN: Activation Assets (Scrollable Image Track) -->
+        <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
+            <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Activation Assets</span>
+            
+            <!-- Image 1 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="images/dogchild1.jpg" alt="Dog Child Experiential Booth Layout" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="images/dogchild2.jpg" alt="Digital Cookbook Lead Magnet Preview" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="images/dogchild3.jpg" alt="On-Site Activation Day 1 Highlights" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="images/dogchild4.jpg" alt="Local Creator Live Content Collaboration" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 5 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="images/dogchild5.jpg" alt="Consumer Lead Acquisition and Engagement Results" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+        </div>
+        
+        <!-- RIGHT COLUMN: Campaign Copy and Targets -->
+        <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
+            <div class="space-y-6">
+                <div>
+                    <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Experiential Lead Acquisition</div>
+                    <h2 class="font-serif text-3xl font-bold text-forestGreen">Dog Child Activation</h2>
+                </div>
+                <div>
+                    <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
+                    <p class="text-sm font-light leading-relaxed text-forestGreen/80">Standard corporate lead generation at high-traffic expo events often feels transactional, missing an opportunity to build a genuine, lasting connection with consumers on the floor.</p>
+                </div>
+                <div>
+                    <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
+                    <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Designed an experiential marketing booth layout centered around immediate consumer value.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Offered a free digital dog food cookbook delivered straight to inboxes to solve a real pet-parent pain point.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Collaborated directly with local creators to capture live content and extend our digital reach.</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
+                <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Targets</span>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                        <span class="block text-xl font-serif font-bold text-forestGreen">+350</span>
+                        <span class="text-[10px] font-light opacity-70">Subscribers / Day</span>
+                    </div>
+                    <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                        <span class="block text-xl font-serif font-bold text-forestGreen">High-Intent</span>
+                        <span class="text-[10px] font-light opacity-70">Audience Quality</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <!-- =========================================================
+     MODAL 3: SUNWING SEO PROJECT
+     ========================================================= -->
+    <div id="sunwingModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
+            <button onclick="closeModal('sunwingModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
+            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
+                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">SEO Search Architecture</span>
+                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                    <div class="aspect-[4/3] bg-forestGreen/5 rounded-xs flex items-center justify-center font-serif text-forestGreen/40 text-xs italic">[Intent-Mapping Cluster Model Screenshot]</div>
+                </div>
+                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                    <div class="aspect-[4/3] bg-forestGreen/5 rounded-xs flex items-center justify-center font-serif text-forestGreen/40 text-xs italic">[Organic Index Performance Dashboard]</div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Organic Strategy & Copywriting</div>
+                        <h2 class="font-serif text-3xl font-bold text-forestGreen">Sunwing SEO Optimization</h2>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
+                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Travelers looking for specific vacation planning answers were dropping off due to dense website layout text, resulting in lost organic search volume.</p>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
+                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Dived deep into everyday search data to uncover the exact queries and intents users searched for.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Leveraged optimization data insights to restructure the platform's organic information hierarchy.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Rewrote metadata descriptions and header titles to clear out user friction points.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Targets</span>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">Frictionless</span>
+                            <span class="text-[10px] font-light opacity-70">User Navigation</span>
+                        </div>
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">Optimized</span>
+                            <span class="text-[10px] font-light opacity-70">Organic Indexing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+     MODAL 4: ON RUNNING MODAL POP-UP BOX
+     ========================================================= -->
+    <div id="onRunningModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
+            <button onclick="closeModal('onRunningModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
+            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
+                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Campaign Visual Assets</span>
+                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                    <div class="aspect-[4/3] bg-forestGreen/5 rounded-xs flex items-center justify-center font-serif text-forestGreen/40 text-xs italic">[Place your main community feed mockup graphic here]</div>
+                    <p class="text-[11px] font-light opacity-60 mt-2 text-center">Digital Community Hub Interface Concept</p>
+                </div>
+                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                    <div class="aspect-[4/3] bg-forestGreen/5 rounded-xs flex items-center justify-center font-serif text-forestGreen/40 text-xs italic">[Place your post-run social event photography asset here]</div>
+                    <p class="text-[11px] font-light opacity-60 mt-2 text-center">In-Store Community Event Curation Setup</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Community Growth Strategy</div>
+                        <h2 class="font-serif text-3xl font-bold text-forestGreen">On Running: The Cloud Club</h2>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
+                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">As a premium footwear label scales into mainstream retail, it risks losing the tight-knit consumer closeness that built its brand equity. Relying purely on transactional digital touchpoints drives up digital acquisition costs (CAC) while flatlining customer lifetime value.</p>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
+                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Engineered a seamless box-to-digital QR pipeline inside physical retail shoebox packaging.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Coordinated localized community social morning runs that finish at independent boutique neighborhood cafés.</span></li>
+                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Built an organic street-style lookbook engine to generate steady user content without relying on heavy paid ad spend.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Targets</span>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">+22%</span>
+                            <span class="text-[10px] font-light opacity-70">Repeat Purchase Lift</span>
+                        </div>
+                        <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                            <span class="block text-xl font-serif font-bold text-forestGreen">15%</span>
+                            <span class="text-[10px] font-light opacity-70">MoM Hub Scaling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC CONTROLLERS -->
+    <script>
+        // MODAL CONTROLLER FUNCTIONS
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden'; // Freezes background layout scroll
+        }
+
+        // CLOSE MODAL CONTROLLER
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Restores background page scrolling
+        }
+    </script>
+</body>
+</html>
