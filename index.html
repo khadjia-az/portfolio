@@ -218,6 +218,23 @@
                 </div>
             </div>
 
+            <!-- Card 5: Baggu x Summer Fridays -->
+            <div onclick="openModal('bagguModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
+                <div class="w-full h-44 bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
+                    <img src="baggu-preview.jpg" alt="Baggu x Summer Fridays Collaboration" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
+                </div>
+            <div class="flex justify-between items-start mb-2">
+                <h3 class="font-serif text-2xl text-forestGreen leading-tight">Baggu × Summer Fridays</h3>
+                <span class="text-xl text-forestGreen/40 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+            </div>
+            <p class="text-sm font-light leading-relaxed opacity-80 mb-4">
+                Developed a hypothetical brand partnership concept and TikTok-first campaign strategy tailored for Gen Z community growth.
+            </p>
+            <div class="inline-block self-start bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full">
+                ✦ View Case Study
+            </div>
+        </div>
+
         </div>
     </section>
 
@@ -600,6 +617,84 @@
             </div>
         </div>
     </div>
+
+    <!-- =========================================================
+     MODAL 5: BAGGU X SUMMER FRIDAYS
+     ========================================================= -->
+<div id="bagguModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
+        
+        <!-- Close Button -->
+        <button onclick="closeModal('bagguModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
+        
+        <!-- LEFT COLUMN: Campaign Assets (Scrollable Image Track) -->
+        <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
+            <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Campaign Mockups</span>
+            
+            <!-- Image 1 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="baggu1.jpg" alt="Baggu x Summer Fridays Beach Day Bundle Concept" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="baggu2.jpg" alt="Co-Branded Product Moodboard" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="baggu3.jpg" alt="TikTok Social Strategy Mockup" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="baggu4.jpg" alt="Community Out of Home Activation" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+
+            <!-- Image 5 -->
+            <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
+                <img src="baggu5.jpg" alt="User Generated Content Creative Direction" class="w-full h-auto rounded-xs object-cover shadow-xs">
+            </div>
+        </div>
+        
+        <!-- RIGHT COLUMN: Campaign Copy and Targets -->
+        <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
+            <div class="space-y-6">
+                <div>
+                    <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Brand Partnership & Identity</div>
+                    <h2 class="font-serif text-3xl font-bold text-forestGreen">The Beach Day Campaign</h2>
+                </div>
+                <div>
+                    <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Concept</span>
+                    <p class="text-sm font-light leading-relaxed text-forestGreen/80">Bridging the space between viral clean beauty and cult-favorite functional streetwear. This partnership concept maps an intentional digital strategy around a shared community footprint, bundling summer skincare essentials seamlessly inside limited-edition aesthetic gear.</p>
+                </div>
+                <div>
+                    <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
+                    <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Designed a unified cross-brand visual language balancing pastel aesthetics with utilitarian structures.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Structured a native, TikTok-first launch framework focusing on authentic seeding and organic unboxings.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Mapped out hyper-targeted community activations to naturally incentivize user-generated lifestyle styling.</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
+                <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Targets</span>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                        <span class="block text-xl font-serif font-bold text-forestGreen">Gen Z</span>
+                        <span class="text-[10px] font-light opacity-70">Core Audience Scale</span>
+                    </div>
+                    <div class="p-2 bg-white rounded-xs shadow-md border border-forestGreen/5">
+                        <span class="block text-xl font-serif font-bold text-forestGreen">Organic</span>
+                        <span class="text-[10px] font-light opacity-70">Community Focus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
     <!-- JAVASCRIPT LOGIC CONTROLLERS -->
     <script>
