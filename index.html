@@ -775,7 +775,6 @@
     </div>
 </div>
 
-    <!-- JAVASCRIPT LOGIC CONTROLLERS -->
     <script>
         // MODAL CONTROLLER FUNCTIONS
         function openModal(modalId) {
@@ -792,6 +791,17 @@
             modal.classList.add('opacity-0', 'pointer-events-none');
             document.body.style.overflow = ''; // Restores background page scrolling
         }
+
+        // GLOBAL KEYBOARD LISTENER FOR THE ESCAPE KEY
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                // Finds any modal container that currently has the 'opacity-100' class
+                const openModalElement = document.querySelector('.fixed.opacity-100');
+                if (openModalElement) {
+                    closeModal(openModalElement.id);
+                }
+            }
+        });
     </script>
 </body>
 </html>
