@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khadija Asif | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Editorial Serif & Clean Sans-Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     
+    <!-- Custom Palette Setup -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        creamBase: '#FAF9F5',      /* Soft ivory canvas fallback */
-                        forestGreen: '#1A3A2B',    /* Deep sage-infused forest for editorial readability */
-                        bubblegumPink: '#F9CCD8',  /* Softened pastel pink for tickers & tags */
+                        creamBase: '#FAF9F5', /* Soft ivory canvas fallback */
+                        forestGreen: '#1A3A2B', /* Deep sage-infused forest for editorial readability */
+                        bubblegumPink: '#F9CCD8', /* Softened pastel pink for tickers & tags */
                         lightPastelBlue: '#C9D7E3',/* Dreamy pastel sky blue accent */
                     },
                     fontFamily: {
@@ -28,6 +31,7 @@
         }
     </script>
 
+    <!-- Custom Canvas Layout & Marquee Animation -->
     <style>
         @keyframes marquee {
             0% { transform: translateX(0%); }
@@ -58,8 +62,8 @@
             margin: 0;
             padding: 0;
             background-color: #FAF9F5;
-            background-image: 
-                radial-gradient(circle at 85% 15%, rgba(249, 204, 216, 0.4) 0%, rgba(249, 204, 216, 0.15) 45%, transparent 70%), 
+            background-image:
+                radial-gradient(circle at 85% 15%, rgba(249, 204, 216, 0.4) 0%, rgba(249, 204, 216, 0.15) 45%, transparent 70%),
                 radial-gradient(circle at 15% 35%, rgba(186, 207, 187, 0.45) 0%, rgba(186, 207, 187, 0.15) 50%, transparent 70%),
                 radial-gradient(circle at 50% 75%, rgba(201, 215, 227, 0.4) 0%, rgba(201, 215, 227, 0.1) 45%, transparent 75%);
             z-index: -20;
@@ -69,8 +73,10 @@
 </head>
 <body class="bg-transparent text-forestGreen font-sans selection:bg-bubblegumPink antialiased relative">
 
+    <!-- MASTER FIXED BACKGROUND CANVAS -->
     <div class="global-aurora-canvas"></div>
 
+    <!-- NAVIGATION BAR -->
     <header class="sticky top-0 bg-white/30 backdrop-blur-md border-b border-forestGreen/5 z-50 transition-all">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="font-serif text-2xl font-bold tracking-tight">KA<span class="font-sans text-xs uppercase tracking-widest ml-2 opacity-60">Portfolio</span></a>
@@ -83,13 +89,16 @@
         </div>
     </header>
 
+    <!-- 1. HERO WRAPPER CONTENT -->
     <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-16 relative z-10">
+        <!-- Personal Headshot Display Container -->
         <div class="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-sm border border-forestGreen/10 bg-white p-2 shadow-md">
             <div class="w-full h-full overflow-hidden bg-zinc-100">
+                <!-- Kept the photo in its regular, original colors -->
                 <img src="your-headshot.jpg" alt="Khadija Asif" class="w-full h-full object-cover">
             </div>
         </div>
-        
+        <!-- Editorial Headline Text Layout -->
         <div class="w-full md:w-3/5 space-y-6">
             <h1 class="font-serif text-5xl md:text-6xl tracking-tight leading-[1.15] text-forestGreen">
                 <div class="block mb-4">
@@ -99,11 +108,11 @@
                     </span>.
                 </div>
                 <div class="block text-4xl md:text-5xl font-light">
-                    Using <span class="italic font-normal">intentional design</span> to bring people <span class="italic font-normal">together</span>.
+                    Using <span class="italic font-normal">creative strategy</span> to bring people <span class="italic font-normal">together</span>.
                 </div>
             </h1>
             <p class="text-lg md:text-xl max-w-2xl leading-relaxed text-forestGreen/80 font-light">
-                Digital marketer focused on community building and campaign execution. I bridge the gap between creative design, marketing strategy, and consumer experience.
+                Digital marketer dedicated to driving community engagement and growth. I bridge the gap between intentional social media strategy, creative visual storytelling, and seamless e-commerce performance.
             </p>
             <div class="pt-4">
                 <a href="#contact" class="inline-block px-8 py-3 bg-transparent border border-[#1A3A2B] text-[#1A3A2B] font-sans text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 hover:bg-[#F9CCD8] hover:border-[#F9CCD8] hover:scale-105">
@@ -113,31 +122,38 @@
         </div>
     </section>
 
+    <!-- TICKER STRIP 1 (Top Moving Text) -->
     <div class="w-full bg-[#1A3A2B] border-y border-forestGreen/10 py-3 overflow-hidden select-none">
         <div class="flex whitespace-nowrap animate-marquee">
+            <!-- Content Block 1 -->
             <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium">
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
-                <span class="mx-8">Intentional Design ✦ Creative Campaign Execution</span>
-                <span class="mx-8">Content Management ✦ Brand Identity</span>
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+                <span class="mx-8">Community Growth ✦ Social Performance</span>
+                <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
             </div>
+            <!-- Duplicate Block for Seamless Loop -->
             <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium" aria-hidden="true">
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
-                <span class="mx-8">Intentional Design ✦ Creative Campaign Execution</span>
-                <span class="mx-8">Content Management ✦ Brand Identity</span>
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+                <span class="mx-8">Community Growth ✦ Social Performance</span>
+                <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
             </div>
         </div>
     </div>
 
+    <!-- ==========================================
+    2. "MY WORK" SECTION (Grid of Overlay Triggers)
+    ========================================== -->
     <section id="work" class="max-w-6xl mx-auto px-6 py-24 relative z-10">
         <div class="flex items-baseline justify-between border-b border-forestGreen/10 pb-4 mb-12">
             <h2 class="font-serif text-4xl font-bold tracking-tight">My Work</h2>
             <span class="text-xs uppercase tracking-widest opacity-60">Click any card to view full case study</span>
         </div>
 
+        <!-- Interactive Column Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start mb-24">
-            
+            <!-- Card 1: WITM Campaigns -->
             <div onclick="openModal('witmModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
                 <div class="w-full aspect-[4/3] bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
                     <img src="screenshot3.jpg" alt="WITM Project" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
@@ -154,9 +170,10 @@
                 </div>
             </div>
 
+            <!-- Card 2: Dog Child -->
             <div onclick="openModal('dogChildModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
                 <div class="w-full aspect-[4/3] bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
-                     <img src="dog-child1.jpg" alt="Dog Child Event" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
+                    <img src="dog-child1.jpg" alt="Dog Child Event" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-serif text-2xl text-forestGreen leading-tight">Dog Child Activation</h3>
@@ -170,6 +187,7 @@
                 </div>
             </div>
 
+            <!-- Card 3: Sunwing SEO -->
             <div onclick="openModal('sunwingModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
                 <div class="w-full aspect-[4/3] bg-forestGreen/[0.02] border border-dashed border-forestGreen/10 flex flex-col items-center justify-center mb-5 rounded-sm p-4 text-center group-hover:bg-forestGreen/[0.04] transition-colors duration-300">
                     <span class="text-2xl mb-1">🔍</span>
@@ -189,6 +207,7 @@
                 </div>
             </div>
 
+            <!-- Card 4: On Running -->
             <div onclick="openModal('onRunningModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
                 <div class="w-full aspect-[4/3] bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
                     <img src="on-running1.jpg" alt="On Running Cloud Club Campaign" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
@@ -205,6 +224,7 @@
                 </div>
             </div>
 
+            <!-- Card 5: Baggu x Summer Fridays -->
             <div onclick="openModal('bagguModal')" class="group flex flex-col bg-white border border-forestGreen/5 rounded-sm p-6 hover:border-forestGreen/20 cursor-pointer transition-all duration-300 shadow-md">
                 <div class="w-full aspect-[4/3] bg-white/30 border border-forestGreen/5 overflow-hidden mb-5 rounded-sm">
                     <img src="baggu-sf2.jpg" alt="Baggu x Summer Fridays Collaboration" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500">
@@ -220,42 +240,46 @@
                     ✦ View Case Study
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- ==========================================
+    3. EXPERIENCE, EDUCATION & SKILLS SECTION
+    ========================================== -->
     <section id="experience" class="w-full py-24 relative z-10 border-t border-forestGreen/10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                
+                <!-- Column 1: Skills Card -->
                 <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
                     <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Skills</h2>
-                    
+                    <!-- Core Competencies List -->
                     <ul class="space-y-4 text-xs uppercase tracking-wider font-semibold text-forestGreen/80 mb-6">
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Marketing Automation Pipelines</li>
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Audience Logic & Segmentation</li>
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Campaign & Asset Optimization</li>
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Lifecycle Retention Flows</li>
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>A/B Testing & Analysis Models</li>
-                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Cross-Channel Brand Consistency</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Digital Marketing Frameworks</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Community Growth & Management</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Content Creation & Grid Design</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Social Performance & Analytics</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>E-Commerce Customer Retention</li>
+                        <li class="flex items-center"><span class="text-[#BADCBF] mr-3 font-bold">✦</span>Platform Optimization Models</li>
                     </ul>
 
+                    <!-- Added Toolkit Stack Layer -->
                     <div class="border-t border-dashed border-forestGreen/10 pt-4 mt-auto space-y-3">
                         <div>
-                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Automation & CRM Stack</span>
-                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">HubSpot, Klaviyo, Salesforce, Pardot (Familiarity), Shopify, Monday.com</p>
+                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Digital Marketing & Commerce</span>
+                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Google Analytics, Meta Business Suite, Shopify, Google Ads, Semrush, Klaviyo, HubSpot</p>
                         </div>
                         <div>
-                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Analytics & Data Flow</span>
-                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Power BI (Upskilling), Microsoft Excel (Pivot Tables/VLOOKUP), Google Analytics, Meta Ads Manager, Semrush, BrightEdge</p>
+                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Design & Architecture</span>
+                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Figma, Adobe Photoshop, Illustrator, Canva, Premiere Pro, Capcut</p>
                         </div>
                         <div>
-                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Web Execution & Architecture</span>
-                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">HTML/CSS (Email templates), Figma, Adobe Creative Cloud, Canva</p>
+                            <span class="text-[10px] uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Project Systems</span>
+                            <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Monday.com, Microsoft Excel, Microsoft 365</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Column 2: Education Card -->
                 <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
                     <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Education</h2>
                     <div class="text-forestGreen flex-1 flex flex-col justify-start space-y-5">
@@ -265,7 +289,7 @@
                             <p class="text-sm font-light opacity-90">Toronto Metropolitan University (TMU)</p>
                             <p class="text-xs italic opacity-70 mt-1">Marketing Major</p>
                         </div>
-                        
+                        <!-- Tightened Spacing Transition -->
                         <div class="border-t border-dashed border-forestGreen/10 pt-4">
                             <span class="text-xs uppercase tracking-widest font-bold block mb-1 text-[#BACFBB]">Credentials</span>
                             <h4 class="font-serif text-lg font-semibold">Professional Certifications</h4>
@@ -274,24 +298,29 @@
                     </div>
                 </div>
 
+                <!-- Column 3: Experience Card -->
                 <div class="flex flex-col bg-white border border-forestGreen/5 rounded-sm p-8 shadow-md hover:border-forestGreen/10 transition-all duration-300">
                     <h2 class="font-serif text-3xl font-bold tracking-tight border-b border-forestGreen/10 pb-3 text-forestGreen mb-6">Experience</h2>
                     <div class="space-y-4 text-forestGreen">
+                        <!-- Sunwing: Term 2 -->
                         <div>
                             <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">Jan 2024 – May 2024</span>
                             <h4 class="font-serif text-lg font-semibold">Digital Marketing Intern</h4>
                             <p class="text-sm font-light italic opacity-90">Sunwing Vacations Group</p>
                         </div>
+                        <!-- Sunwing: Term 1 -->
                         <div class="border-t border-dashed border-forestGreen/10 pt-3">
                             <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">May 2023 – Aug 2023</span>
                             <h4 class="font-serif text-lg font-semibold">Digital Marketing Intern</h4>
                             <p class="text-sm font-light italic opacity-90">Sunwing Vacations Group</p>
                         </div>
+                        <!-- Dog Child -->
                         <div class="border-t border-dashed border-forestGreen/10 pt-3">
                             <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">Jan 2023 – Apr 2023</span>
                             <h4 class="font-serif text-lg font-semibold">Digital Marketing Co-Op</h4>
                             <p class="text-sm font-light italic opacity-90">Dog Child</p>
                         </div>
+                        <!-- Browns Shoes -->
                         <div class="border-t border-dashed border-forestGreen/10 pt-3">
                             <span class="text-xs uppercase tracking-widest font-bold block mb-0.5 text-[#BACFBB]">Aug 2021 – Present</span>
                             <h4 class="font-serif text-lg font-semibold">Retail Sales Associate</h4>
@@ -299,28 +328,31 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- TICKER STRIP 2 (Bottom Moving Text) -->
     <div class="w-full bg-[#1A3A2B] border-b border-forestGreen/10 py-3 overflow-hidden select-none">
         <div class="flex whitespace-nowrap animate-marquee-reverse">
+            <!-- Content Block 1 -->
             <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium">
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
-                <span class="mx-8">Intentional Design ✦ Creative Campaign Execution</span>
-                <span class="mx-8">Content Management ✦ Brand Identity</span>
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+                <span class="mx-8">Community Growth ✦ Social Performance</span>
+                <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
             </div>
+            <!-- Duplicate Block for Seamless Loop -->
             <div class="flex items-center text-[#FAF9F5] text-xs font-sans uppercase tracking-widest font-medium" aria-hidden="true">
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
-                <span class="mx-8">Intentional Design ✦ Creative Campaign Execution</span>
-                <span class="mx-8">Content Management ✦ Brand Identity</span>
-                <span class="mx-8">Digital Marketing Strategy ✦ Community Building</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
+                <span class="mx-8">Community Growth ✦ Social Performance</span>
+                <span class="mx-8">E-Commerce Strategy ✦ Intentional Storytelling</span>
+                <span class="mx-8">Digital Marketing ✦ Creative Strategy</span>
             </div>
         </div>
     </div>
 
+    <!-- 4. CONTACT SECTION -->
     <section id="contact" class="max-w-6xl mx-auto px-6 py-24 text-center space-y-12 relative z-10">
         <div class="space-y-4">
             <div class="inline-block bg-bubblegumPink text-forestGreen text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">
@@ -333,6 +365,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto pt-6">
+            <!-- Email Pill -->
             <a href="mailto:khadija.asif@torontomu.ca" class="group flex items-center gap-3 bg-white border border-forestGreen/5 hover:border-forestGreen/30 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md">
                 <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full group-hover:bg-bubblegumPink transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 17.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5A2.25 2.25 0 0 0 2.25 6.75m19.5 0v2.25m0-2.25l-6.75 4.50-.003-.002a1.124 1.124 0 0 1-1.244 0L3.75 6.75M21.75 6.75l-6.75 4.5M3.75 6.75l6.75 4.5" /></svg>
@@ -340,6 +373,7 @@
                 <span class="text-xs font-semibold tracking-widest uppercase">Email</span>
             </a>
 
+            <!-- LinkedIn Pill -->
             <a href="https://linkedin.com/in/khadija-asif" target="_blank" class="group flex items-center gap-3 bg-white border border-forestGreen/5 hover:border-forestGreen/30 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md">
                 <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full group-hover:bg-bubblegumPink transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -347,6 +381,7 @@
                 <span class="text-xs font-semibold tracking-widest uppercase">LinkedIn</span>
             </a>
 
+            <!-- Location Status Pill -->
             <div class="group flex items-center gap-3 bg-white border border-forestGreen/5 p-3.5 px-6 rounded-full w-full sm:w-auto transition-all shadow-md select-none">
                 <div class="w-7 h-7 bg-white text-forestGreen flex items-center justify-center rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0Z" /></svg>
@@ -356,29 +391,37 @@
         </div>
     </section>
 
+    <!-- =========================================================
+    MODAL 1: WITM CAMPAIGNS
+    ========================================================= -->
     <div id="witmModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
             <button onclick="closeModal('witmModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
-            
+            <!-- LEFT COLUMN: Campaign Visual Assets -->
             <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
                 <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Visual Assets</span>
+                <!-- Image 1 -->
                 <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
                     <img src="image.jpg" alt="WITM Event Keynote Presentation" class="w-full h-auto rounded-xs object-cover shadow-xs">
                 </div>
+                <!-- Image 2 -->
                 <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
                     <img src="image (1).jpg" alt="WITM Gala Dinner Tables" class="w-full h-auto rounded-xs object-cover shadow-xs">
                 </div>
+                <!-- Image 3 -->
                 <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
                     <img src="screenshot1.jpg" alt="WITM Event Highlights Day 2 and 3" class="w-full h-auto rounded-xs object-cover shadow-xs">
                 </div>
+                <!-- Image 4 -->
                 <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
                     <img src="screenshot2.jpg" alt="Empower Tech A Night to Remember Photo Booth" class="w-full h-auto rounded-xs object-cover shadow-xs">
                 </div>
+                <!-- Image 5 -->
                 <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
                     <img src="screenshot3.jpg" alt="WITM The Faces Behind Team Magazine Covers" class="w-full h-auto rounded-xs object-cover shadow-xs">
                 </div>
             </div>
-            
+            <!-- RIGHT COLUMN: Campaign Descriptions -->
             <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
                 <div class="space-y-6">
                     <div>
@@ -406,167 +449,7 @@
         </div>
     </div>
 
-    <div id="dogChildModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
-            <button onclick="closeModal('dogChildModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
-            
-            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
-                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Visual Assets</span>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="dog-child1.jpg" alt="Dog Child Expo Booth" class="w-full h-auto rounded-xs object-cover">
-                </div>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="dog-child2.jpg" alt="Dog Child Packaging Display" class="w-full h-auto rounded-xs object-cover">
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
-                <div class="space-y-6">
-                    <div>
-                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Field Marketing & Engagement</div>
-                        <h2 class="font-serif text-3xl font-bold text-forestGreen">Dog Child Expo Activation</h2>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
-                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Connecting premium consumer packaged goods (CPG) brands directly to highly active local communities during high-density physical pet expos without losing downstream engagement.</p>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
-                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Co-managed operational execution and interactive pathing for our physical event booth at the Canadian Pet Expo.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Pivoted our on-site storytelling model to present clear product values, matching targeted solutions to specific pet dietary needs.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Managed inventory distribution pipelines directly to consumer touchpoints to ensure zero product shortages during peak hours.</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
-                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Hub</span>
-                    <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Secured widespread brand visibility and expanded on-site sign-ups, establishing immediate personal feedback loops that connected pet parents to our core community ecosystem.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="sunwingModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
-            <button onclick="closeModal('sunwingModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
-            
-            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
-                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Analytics Architecture</span>
-                <div class="bg-white p-6 border border-dashed border-forestGreen/10 rounded-sm text-center text-xs italic opacity-60">
-                    Proprietary search queries and internal metrics omitted for compliance.
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
-                <div class="space-y-6">
-                    <div>
-                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Organic Search & Auditing</div>
-                        <h2 class="font-serif text-3xl font-bold text-forestGreen">Sunwing SEO Optimizations</h2>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
-                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Valuable customer travel platforms were falling behind in intentional user queries, creating navigation gaps during competitive vacation booking windows.</p>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
-                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Conducted comprehensive audits on search behaviors and intent variations across prominent resort pathways.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Rewrote architectural web copy block modules to align directly with verified consumer questions and search intents.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Collaborated alongside product leads to verify keyword integrations matched brand guidelines and tone parameters.</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
-                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Hub</span>
-                    <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Strengthened structural platform readability and discoverability, creating an effortless informational flow that reduced user friction across key destination channels.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="onRunningModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
-            <button onclick="closeModal('onRunningModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
-            
-            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
-                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Visual Assets</span>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="on-running1.jpg" alt="Cloud Club App Interface mockup" class="w-full h-auto rounded-xs object-cover">
-                </div>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="on-running2.jpg" alt="Cloud Club Premium Packaging Concept" class="w-full h-auto rounded-xs object-cover">
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
-                <div class="space-y-6">
-                    <div>
-                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Lifecycle Architecture</div>
-                        <h2 class="font-serif text-3xl font-bold text-forestGreen">The Cloud Club Retainers</h2>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
-                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Premium athletic brands experience significant drops in post-purchase interest immediately after checkout, missing crucial opportunities to build long-term loyalty during the unboxing phase.</p>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
-                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Engineered a box-to-digital QR pipeline directly connecting physical product packaging to mobile-first community hubs.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Designed immersive post-purchase user funnels with personalized dashboards, running groups, and early-access privileges.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Formulated strategic lifecycle entry rules based on purchase behaviors to personalize ongoing CRM communication.</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
-                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Hub</span>
-                    <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Created a fully actionable retention framework that maximizes immediate product unboxings into measurable secondary conversions and lifetime brand alignment.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="bagguModal" class="fixed inset-0 bg-forestGreen/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white w-full max-w-5xl h-[90vh] md:h-[80vh] rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row relative">
-            <button onclick="closeModal('bagguModal')" class="absolute top-4 right-4 bg-white/80 backdrop-blur-xs text-forestGreen hover:text-bubblegumPink text-2xl font-light w-10 h-10 flex items-center justify-center rounded-full border border-forestGreen/10 z-20 transition-colors cursor-pointer">&times;</button>
-            
-            <div class="w-full md:w-1/2 bg-creamBase h-1/2 md:h-full overflow-y-auto p-6 space-y-6 border-b md:border-b-0 md:border-r border-forestGreen/10">
-                <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-2">Visual Assets</span>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="baggu-sf1.jpg" alt="Baggu x Summer Fridays Pouch Design" class="w-full h-auto rounded-xs object-cover">
-                </div>
-                <div class="bg-white p-3 border border-forestGreen/5 shadow-xs rounded-sm">
-                    <img src="baggu-sf2.jpg" alt="Co-branded PR Box Unboxing mock" class="w-full h-auto rounded-xs object-cover">
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 h-1/2 md:h-full overflow-y-auto p-8 space-y-6 flex flex-col justify-between">
-                <div class="space-y-6">
-                    <div>
-                        <div class="inline-block bg-bubblegumPink text-forestGreen font-semibold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full mb-3">✦ Partnership & Growth</div>
-                        <h2 class="font-serif text-3xl font-bold text-forestGreen">Baggu × Summer Fridays</h2>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Problem</span>
-                        <p class="text-sm font-light leading-relaxed text-forestGreen/80">Sustaining organic expansion inside the Gen Z demographic requires unique collaborative marketing intersections that capture active engagement without diluting brand equity.</p>
-                    </div>
-                    <div>
-                        <span class="inline-block bg-[#BADCBF]/30 text-forestGreen font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-sm mb-2">The Execution</span>
-                        <ul class="space-y-2 text-sm font-light leading-relaxed text-forestGreen/90">
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Developed a comprehensive cross-brand strategy leveraging overlapping core consumer segments across lifestyle ecosystems.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Designed experiential short-form video engagement tracks and automated social-to-email acquisition landing pads.</span></li>
-                            <li class="flex items-start gap-2"><span class="text-[#BADCBF] mt-0.5">✦</span><span>Created custom visual packaging assets that unify sustainable accessories with modern luxury skincare aesthetics.</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-[#BADCBF]/10 border border-[#BADCBF]/30 p-4 rounded-sm mt-auto">
-                    <span class="block text-[10px] font-bold uppercase tracking-widest text-forestGreen opacity-60 mb-2">Campaign Impact Hub</span>
-                    <p class="text-xs font-light text-forestGreen/90 leading-relaxed">Built a highly optimized community acquisition roadmap engineered to cross-pollinate brand assets, scale internal lists, and harness high-velocity viral traffic.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Simple JavaScript for Modal Functionality -->
     <script>
         function openModal(id) {
             const modal = document.getElementById(id);
